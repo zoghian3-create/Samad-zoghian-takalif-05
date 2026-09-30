@@ -1,0 +1,16 @@
+username = input('enter your username:')
+
+password = input('enter your password:')
+
+correct_username = "admin"
+correct_password = "1234"
+
+while True:
+    username = input("نام کاربری را وارد کنید: ")
+    password = input("رمز عبور را وارد کنید: ")
+
+    if username == correct_username and password == correct_password:
+        print("با موفقیت وارد شدید.")
+        break
+    else:
+        print("نام کاربری یا رمز عبور صحیح نیست.")
