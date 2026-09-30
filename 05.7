@@ -1,0 +1,29 @@
+foods = ["pitza", "kabab", "ghrmeh sabzi", "akbar jojeh", "makaroni", "salaad", "cocacola"]
+
+orders = []
+
+print("=== restauran menu ===")
+for i, food in enumerate(foods, start=1):
+    print(f"{i}. {food}")
+
+print("ba yae sabte sefaresh nam ghaza ra vared konid")
+
+while True:
+    item = input("نام غذا: ").strip()
+
+    if item.lower() == "order":
+        break
+
+    if item in foods:
+        orders.append(item)
+        print(f"'{item}' به سفارش‌های شما اضافه شد.")
+    else:
+        print(f"'{item}' در منو موجود نیست. لطفاً از منو انتخاب کنید.")
+
+print("=== فاکتور شما ===")
+if len(orders) == 0:
+    print("شما هیچ سفارشی ثبت نکردید.")
+else:
+    for i, order in enumerate(orders, start=1):
+        print(f"{i}. {order}")
+    print(f"تعداد کل سفارش‌ها: {len(orders)}")
