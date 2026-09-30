@@ -1,0 +1,18 @@
+correct_username = "admin"
+correct_password = "1234"
+max_attempts = 3
+count = 0
+
+while count < max_attempts:
+    username = input("enter your username: ")
+    password = input("enter your password: ")
+
+    if username == correct_username and password == correct_password:
+        print("successfully logged in")
+        break
+    else:
+        print("incorrect username or password")
+        count += 1
+        if count >= max_attempts:
+            print("lock your account")
+            break
